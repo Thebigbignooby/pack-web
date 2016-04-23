@@ -2,6 +2,24 @@ html, body {
   height: 100%;
 }
 
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto-Light'), url('../fonts/Roboto-Light.ttf') format('truetype');
+}
+
 body {
-  font-family: 
+  font-family: 'Roboto', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, Arial, sans-serif;
+}
+
+a {
+  font-weight: 400;
 }
