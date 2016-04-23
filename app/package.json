@@ -1,0 +1,15 @@
+{
+  "name": "pack-web",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "author": "Rory Dent",
+  "main": "main.js",
+  "keywords": [
+    "Electron",
+    "webpack"
+  ],
+  "license": "CC0-1.0",
+  "homepage": "http://thebigbignooby.github.io",
+  "dependencies": {
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "description": "A minimal Electron application",
+  "scripts": {
+    "start": "electron ./app/main.js",
+    "build-all": "electron-packager ./app --all --out dist/",
+    "linux-installer": "electron-installer-debian --src dist/app-linux-x64/ --dest dist/installers/ --arch amd64",
+    "postinstall": "install-app-deps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electron/electron-quick-start.git"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "build": {
+    "app-bundle-id": "pack.web",
+    "app-category-type": "pack.web.category",
+    "iconUrl": "(windows only)"
+  },
+  "bugs": {
+    "url": "https://github.com/electron/electron-quick-start/issues"
+  },
+  "homepage": "https://github.com/electron/electron-quick-start#readme",
+  "devDependencies": {
+    "electron-builder": "^3.5.1",
+    "electron-installer-debian": "^0.2.0",
+    "electron-packager": "^6.0.2",
+    "electron-prebuilt": "^0.37.0"
+  }
+}
