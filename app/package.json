@@ -11,5 +11,7 @@
   "license": "CC0-1.0",
   "homepage": "http://thebigbignooby.github.io",
   "dependencies": {
+    "font-awesome": "^4.6.1",
+    "jquery": "^2.2.3"
   }
 }

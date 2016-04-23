@@ -3,11 +3,32 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+    <script>const $ = require('jquery');</script>
   </head>
   <body>
     <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
+    We are using node <script>document.write(process.versions.node)</script>,<br>
+    Chromium <script>document.write(process.versions.chrome)</script>,<br>
     and Electron <script>document.write(process.versions.electron)</script>.
+
+    <div id="main-content">
+      <a href="#" id="select-project">Select Project</a>
+    </div>
+
   </body>
+
+  <script>
+    $(document).ready(jqueryFunctions);
+
+    function jqueryFunctions() {
+      selectProjectListener();
+    }
+
+    function selectProjectListener() {
+      $('#select-project').click( e => {
+        alert('select project clicked !');
+        e.preventDefault();
+      })
+    }
+  </script>
 </html>

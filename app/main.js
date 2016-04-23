@@ -1,26 +1,24 @@
 'use strict';
 
 const electron = require('electron');
-// Module to control application life.
+const fs = require('fs');
+
 const app = electron.app;
-// Module to create native browser window.
+const shell = electron.shell;
 const BrowserWindow = electron.BrowserWindow;
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
-function createWindow () {
-  // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600});
+app.on('ready', createWindow);
 
-  // and load the index.html of the app.
+function createWindow () {
+
+  mainWindow = new BrowserWindow({width: 1000, height: 600});
+
   mainWindow.loadURL('file://' + __dirname + '/index.html');
 
-  // Open the DevTools.
   mainWindow.webContents.openDevTools();
 
-  // Emitted when the window is closed.
   mainWindow.on('closed', function() {
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
@@ -28,10 +26,6 @@ function createWindow () {
     mainWindow = null;
   });
 }
-
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-app.on('ready', createWindow);
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
@@ -49,3 +43,16 @@ app.on('activate', function () {
     createWindow();
   }
 });
+
+let fullPath = '/home/thebigbignooby/dev/thebigbignooby.github.io/webpack.config.js';
+// shell.showItemInFolder(fullPath);
+// shell.openItem(fullPath);
+
+// testStuff();
+
+function testStuff() {
+  fs.readFile(fullPath, 'utf-8', (err, data) => {
+    if(err) throw err;
+    console.log(data);
+  });
+}
